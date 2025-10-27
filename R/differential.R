@@ -1,7 +1,7 @@
 # build polynomial class
-Differential<-new_class("Differential",
+Differential<-S7::new_class("Differential",
                       properties=list(
-                        equation=class_character
+                        equation=S7::class_character
                       ),
                       validator=function(self){
                         if(!is.character(self@equation)){

@@ -2,9 +2,10 @@ Package: phaseportrait
 Title: Phase Portrait Analysis for ODE
 Version: 0.0.0.9000
 Authors@R: 
-    person(Vicky, Jung, , jungvicky@ufl.edu, role = c("aut", "cre"))
-Description: More (hopefully) cracked version of basic portrait phase analysis 
+    person("Vicky", "Jung", , "jungvicky@ufl.edu", role = c("aut", "cre"))
+Description: This package provides functions for solving ODEs and analyzing phase portraits
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.3
+Imports: S7
