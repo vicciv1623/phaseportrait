@@ -1,8 +1,8 @@
 #' Differential class
 #'
-#' @param equation a character
+#' @param x a character
 #'
-#' Building basis for defining an ODE
+#'
 #' @section Properties:
 #' \describe{
 #'  \item{equation}{The basis for an ODE}
@@ -17,6 +17,30 @@ Differential<-S7::new_class("Differential",
                         if(!is.character(self@equation)){
                           "@equation must be a string"
                         }
+                      },
+                      constructor=function(x){
+                        S7::new_object(
+                          S7::S7_object(),
+                          equation=x
+                        )
                       })
 
-
+#' @name print.Differential
+#' @title print Method for Differential object
+#'
+#' @description
+#' Print the equation of the function
+#'
+#' @param x An object of class `Differential`
+#' @returns Invisibly returns `x`
+#'
+#' @examples
+#' d<-Differential("-3y")
+#' d   #implicit print
+#' print(d)    #explicit print
+#'
+#' @method print Differential
+S7::method(print, Differential)<-function(x){
+  cat("Function:", x@equation)
+  invisible(x)
+}

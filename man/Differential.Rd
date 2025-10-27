@@ -4,12 +4,10 @@
 \alias{Differential}
 \title{Differential class}
 \usage{
-Differential(equation = character(0))
+Differential(x)
 }
 \arguments{
-\item{equation}{a character
-
-Building basis for defining an ODE}
+\item{x}{a character}
 }
 \description{
 Differential class
