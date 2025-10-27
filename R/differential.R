@@ -1,4 +1,4 @@
-#' Differential class
+#' ODEFunction class
 #'
 #' @param x a character
 #'
@@ -9,7 +9,7 @@
 #' }
 #'
 #' @export
-Differential<-S7::new_class("Differential",
+ODEFunction<-S7::new_class("ODEFunction",
                       properties=list(
                         equation=S7::class_character
                       ),
@@ -25,22 +25,24 @@ Differential<-S7::new_class("Differential",
                         )
                       })
 
-#' @name print.Differential
-#' @title print Method for Differential object
+#' @name print.ODEFunction
+#' @title print Method for ODEFunction object
 #'
 #' @description
-#' Print the equation of the function
+#' Print the equation of the ODEFunction
 #'
-#' @param x An object of class `Differential`
+#' @param x An object of class `ODEFunction`
 #' @returns Invisibly returns `x`
 #'
 #' @examples
-#' d<-Differential("-3y")
+#' d<-ODEFunction("-3y")
 #' d   #implicit print
 #' print(d)    #explicit print
 #'
-#' @method print Differential
-S7::method(print, Differential)<-function(x){
-  cat("Function:", x@equation)
+#' @method print ODEFunction
+S7::method(print, ODEFunction)<-function(x){
+  cat("ODEFunction:", x@equation)
   invisible(x)
 }
+
+
